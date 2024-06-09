@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://t84ewg8foeua"]
+
+[ext_resource type="Texture2D" uid="uid://bqrc42fkndbbb" path="res://Assets/Free/Items/Boxes/Box1/Idle.png" id="1_tlt6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxhq6"]
+
+[node name="caixa" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tlt6j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mxhq6")

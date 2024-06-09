@@ -1,0 +1,241 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqouug8y72iw0"]
+
+[ext_resource type="Script" path="res://Scripts/mundo.gd" id="1_01bu4"]
+[ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="1_74o16"]
+[ext_resource type="Texture2D" uid="uid://dro37vxm11tqm" path="res://Assets/Free/Background/Yellow.png" id="1_a5qcm"]
+[ext_resource type="Texture2D" uid="uid://chyth0ir30102" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="3_ti126"]
+[ext_resource type="PackedScene" uid="uid://cas58dr7vq717" path="res://Scenes/jogador.tscn" id="4_hsuhr"]
+[ext_resource type="PackedScene" uid="uid://64w2033ahw2x" path="res://Scenes/game_over.tscn" id="6_qjuki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwtfo"]
+size = Vector2(622, 45)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1aqi"]
+texture = ExtResource("3_ti126")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_51msd"]
+sources/0 = SubResource("TileSetAtlasSource_o1aqi")
+
+[node name="Mundo" type="Node2D"]
+script = ExtResource("1_01bu4")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_74o16")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(168, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 168.0
+offset_bottom = 288.0
+texture = ExtResource("1_a5qcm")
+
+[node name="chao" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
+position = Vector2(303, 271)
+shape = SubResource("RectangleShape2D_xwtfo")
+
+[node name="TileMap" type="TileMap" parent="chao"]
+position = Vector2(88, 24)
+tile_set = SubResource("TileSet_51msd")
+format = 2
+layer_0/tile_data = PackedInt32Array(983034, 393216, 0, 1048570, 393216, 1, 1114106, 393216, 2, 983035, 458752, 0, 1048571, 458752, 1, 1114107, 458752, 2, 983036, 524288, 0, 1048572, 524288, 1, 1114108, 524288, 2, 983037, 393216, 0, 1048573, 393216, 1, 1114109, 393216, 2, 983038, 458752, 0, 1048574, 458752, 1, 1114110, 458752, 2, 983039, 524288, 0, 1048575, 524288, 1, 1114111, 524288, 2, 917504, 393216, 0, 983040, 393216, 1, 1048576, 393216, 2, 917505, 458752, 0, 983041, 458752, 1, 1048577, 458752, 2, 917506, 524288, 0, 983042, 524288, 1, 1048578, 524288, 2, 917507, 393216, 0, 983043, 393216, 1, 1048579, 393216, 2, 917508, 458752, 0, 983044, 458752, 1, 1048580, 458752, 2, 917509, 524288, 0, 983045, 524288, 1, 1048581, 524288, 2, 917510, 393216, 0, 983046, 393216, 1, 1048582, 393216, 2, 917511, 458752, 0, 983047, 458752, 1, 1048583, 458752, 2, 917512, 524288, 0, 983048, 524288, 1, 1048584, 524288, 2, 917513, 393216, 0, 983049, 393216, 1, 1048585, 393216, 2, 917514, 458752, 0, 983050, 458752, 1, 1048586, 458752, 2, 917515, 524288, 0, 983051, 524288, 1, 1048587, 524288, 2, 917516, 393216, 0, 983052, 393216, 1, 1048588, 393216, 2, 917517, 458752, 0, 983053, 458752, 1, 1048589, 458752, 2, 917518, 524288, 0, 983054, 524288, 1, 1048590, 524288, 2, 917519, 393216, 0, 983055, 393216, 1, 1048591, 393216, 2, 917520, 458752, 0, 983056, 458752, 1, 1048592, 458752, 2, 917521, 524288, 0, 983057, 524288, 1, 1048593, 524288, 2, 917522, 393216, 0, 983058, 393216, 1, 1048594, 393216, 2, 917523, 458752, 0, 983059, 458752, 1, 1048595, 458752, 2, 917524, 524288, 0, 983060, 524288, 1, 1048596, 524288, 2, 917525, 393216, 0, 983061, 393216, 1, 1048597, 393216, 2, 917526, 458752, 0, 983062, 458752, 1, 1048598, 458752, 2, 917527, 524288, 0, 983063, 524288, 1, 1048599, 524288, 2, 917528, 393216, 0, 983064, 393216, 1, 1048600, 393216, 2, 917529, 458752, 0, 983065, 458752, 1, 1048601, 458752, 2, 917530, 524288, 0, 983066, 524288, 1, 1048602, 524288, 2, 917531, 393216, 0, 983067, 393216, 1, 1048603, 393216, 2, 917532, 458752, 0, 983068, 458752, 1, 1048604, 458752, 2, 917533, 524288, 0, 983069, 524288, 1, 1048605, 524288, 2, 917534, 393216, 0, 983070, 393216, 1, 1048606, 393216, 2, 917535, 458752, 0, 983071, 458752, 1, 1048607, 458752, 2, 917536, 524288, 0, 983072, 524288, 1, 1048608, 524288, 2)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_right = 26.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Score: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 36.0
+offset_right = 84.0
+offset_bottom = 59.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "High Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -11.5
+offset_right = 74.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Space to play"
+
+[node name="Jogador" parent="." instance=ExtResource("4_hsuhr")]
+position = Vector2(40, 234)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(84, 144)
+
+[node name="Game_Over" parent="." instance=ExtResource("6_qjuki")]
+process_mode = 2
